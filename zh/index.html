@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ruoying Wang，昆山杜克大学本科生，研究高效模型推理、部署与机器学习系统，包括推测解码、移动端 GUI 智能体和视觉推理流水线。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ruoying Wang">
+  <meta property="og:description" content="高效模型推理、部署与机器学习系统。">
+  <meta property="og:url" content="https://guyong1449.github.io/zh/">
+  <link rel="canonical" href="https://guyong1449.github.io/zh/">
+  <link rel="alternate" hreflang="en" href="https://guyong1449.github.io/">
+  <link rel="alternate" hreflang="zh-CN" href="https://guyong1449.github.io/zh/">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Ruoying Wang","url":"https://guyong1449.github.io/","email":"mailto:rw335@duke.edu","affiliation":{"@type":"CollegeOrUniversity","name":"Duke Kunshan University"},"sameAs":["https://github.com/guyong1449","https://guyong.site/"]}</script>
+  <title>Ruoying Wang</title>
+</head>
+<body>
+  <main class="page">
+    <nav class="lang-switch" aria-label="语言切换"><a href="../" lang="en">English</a><span aria-hidden="true">/</span><a href="./" lang="zh-CN" aria-current="page">中文</a></nav>
+    <header class="intro">
+      <h1>Ruoying Wang</h1>
+      <p class="role">AI 基础设施与高效推理 · 昆山杜克大学</p>
+      <p class="contacts"><a href="mailto:rw335@duke.edu">邮箱</a><span>·</span><a href="https://github.com/guyong1449">GitHub</a><span>·</span><a href="https://guyong.site/">个人站</a></p>
+    </header>
+
+    <section aria-labelledby="about">
+      <h2 id="about">关于我</h2>
+      <p>我就读于昆山杜克大学应用数学与计算科学专业计算机科学方向，研究如何让 AI 模型更高效地推理与部署。目前的工作涉及推测解码、移动端 GUI 智能体和机器学习系统。</p>
+      <p>我关注算法与运行时实现之间的衔接：减少重复的模型计算、并行化 CPU 侧推理工作，并在完整流水线中测量延迟。</p>
+    </section>
+
+    <section aria-labelledby="research">
+      <h2 id="research">研究经历</h2>
+      <article class="entry">
+        <div class="entry-head"><h3>免训练推测解码与 Token 复用</h3><span>2026 年 8 月至今</span></div>
+        <p class="advisor">导师：<a href="https://faculty.dukekunshan.edu.cn/faculty_profiles/jiacheng-shen">Jiacheng Shen 教授</a></p>
+        <p>优化免训练大语言模型推理中的草稿生成路径。通过多源后缀检索、基于 Trie 的候选融合，以及考虑置信度与成本的选择策略，在 Llama 3.1-8B、NVIDIA A40 的五次完整基准测试中，相比原始 Suffix proposer 将<strong>解码阶段实际耗时降低 20.4%</strong>。</p>
+        <p>将逐请求串行推测改为跨请求批量并行草稿生成，采用持久化 C++ 线程池并释放 GIL。批量大小为 16 时，CPU 草稿生成耗时由 280.6 μs 降至 102.9 μs（<strong>加速 2.73 倍</strong>），生成结果保持逐位一致。</p>
+      </article>
+      <article class="entry">
+        <div class="entry-head"><h3>MEMOIR：移动端 GUI 智能体运行时加速</h3><span>2026 年 3 月至 8 月</span></div>
+        <p class="advisor">导师：<a href="https://faculty.dukekunshan.edu.cn/faculty_profiles/jiacheng-shen">Jiacheng Shen 教授</a></p>
+        <p>共同设计精简的推理复用 DSL 与基于置信度的记忆检索，复用成功的 GUI 操作经验，减少重复的视觉语言模型推理。在 AndroidControl 与 Qwen3-VL 8B 上，单步耗时由 3,314 ms 降至 1,019 ms（<strong>加速 3.25 倍</strong>）；相较思维链智能体，底层步骤准确率由 65.2% 提升至 69.3%。论文已投稿 ICLR。</p>
+      </article>
+      <article class="entry">
+        <div class="entry-head"><h3>PACESatMAE：卫星数据分布式预训练</h3><span>2025 年 3 月至 2026 年 5 月</span></div>
+        <p class="advisor">导师：<a href="https://faculty.dukekunshan.edu.cn/faculty_profiles/zuchuan-li">Zuchuan Li 教授</a></p>
+        <p>构建面向 TB 级卫星影像的分布式 PyTorch 训练与流式数据加载流水线，优化多 GPU 吞吐与 I/O 效率。针对 170 多个波段的 PACE 高光谱影像，设计使用可学习嵌入的 256 级光谱 token 化方法。下游叶绿素 a 浓度估计达到 <strong>R² = 0.986</strong>；MAE 预训练使收敛速度提高约 2.5 倍。</p>
+      </article>
+    </section>
+
+    <section aria-labelledby="experience">
+      <h2 id="experience">实习经历</h2>
+      <article class="entry">
+        <div class="entry-head"><h3>计算机视觉实习生 · 视觉模型部署与实时推理</h3><span>2026 年 5 月至 8 月</span></div>
+        <p class="affiliation">南京莱斯电子设备有限公司</p>
+        <p>构建实时无人机视频推理流水线，结合 YOLOv5 目标检测、Qwen2.5-VL 场景理解与跨帧时序一致性检查。在华为昇腾 910B NPU 上部署视觉模型，采用结构化剪枝、INT8 量化和硬件感知编译，降低模型体积与推理开销。</p>
+        <p>实现五路 720p 视频异步推理流水线，将硬件视频解码、预处理和 NPU 执行重叠，保持<strong>解码到推理的 P95 延迟低于 100 ms</strong>。</p>
+      </article>
+    </section>
+
+    <section aria-labelledby="education">
+      <h2 id="education">教育背景</h2>
+      <div class="entry-head"><h3>昆山杜克大学</h3><span>2024 年至 2028 年（预计）</span></div>
+      <p>应用数学与计算科学学士，计算机科学方向。GPA：3.6/4.0。</p>
+    </section>
+
+    <section aria-labelledby="skills">
+      <h2 id="skills">技能</h2>
+      <p>Python、C++、Java · PyTorch、分布式训练 · Linux、Docker、Git · CUDA/CANN</p>
+    </section>
+
+    <footer><p>技术笔记、课程记录与创作内容见<a href="https://guyong.site/">个人站</a>。· 更新于 2026 年 10 月</p></footer>
+  </main>
+</body>
+</html>

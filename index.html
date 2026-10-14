@@ -9,6 +9,8 @@
   <meta property="og:description" content="Research in efficient model inference, deployment, and machine learning systems.">
   <meta property="og:url" content="https://guyong1449.github.io/">
   <link rel="canonical" href="https://guyong1449.github.io/">
+  <link rel="alternate" hreflang="en" href="https://guyong1449.github.io/">
+  <link rel="alternate" hreflang="zh-CN" href="https://guyong1449.github.io/zh/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Ruoying Wang","url":"https://guyong1449.github.io/","email":"mailto:rw335@duke.edu","affiliation":{"@type":"CollegeOrUniversity","name":"Duke Kunshan University"},"sameAs":["https://github.com/guyong1449","https://guyong.site/"]}</script>
@@ -16,6 +18,7 @@
 </head>
 <body>
   <main class="page">
+    <nav class="lang-switch" aria-label="Language"><a href="./" lang="en" aria-current="page">English</a><span aria-hidden="true">/</span><a href="zh/" lang="zh-CN">中文</a></nav>
     <header class="intro">
       <h1>Ruoying Wang</h1>
       <p class="role">AI Infrastructure &amp; Efficient Inference · Duke Kunshan University</p>
@@ -51,7 +54,8 @@
     <section aria-labelledby="experience">
       <h2 id="experience">Industry Experience</h2>
       <article class="entry">
-        <div class="entry-head"><h3>Computer Vision Intern · Nanjing LES Electronic Equipment Co., Ltd.</h3><span>May – Aug 2026</span></div>
+        <div class="entry-head"><h3>Computer Vision Intern · Vision Model Deployment &amp; Real-Time Inference</h3><span>May – Aug 2026</span></div>
+        <p class="affiliation">Nanjing LES Electronic Equipment Co., Ltd.</p>
         <p>Built a real-time UAV video inference pipeline combining YOLOv5 detection, Qwen2.5-VL scene understanding, and temporal consistency checks across frames. For deployment on Huawei Ascend 910B NPUs, applied structured pruning, INT8 quantization, and hardware-aware compilation to reduce model footprint and inference overhead.</p>
         <p>Engineered an asynchronous five-stream 720p pipeline that overlaps hardware video decoding, preprocessing, and NPU execution. The deployed inference path sustained <strong>P95 decode-to-inference latency below 100 ms</strong>.</p>
       </article>
