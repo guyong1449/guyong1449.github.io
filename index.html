@@ -3,44 +3,48 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Ruoying Wang is an undergraduate researcher at Duke Kunshan University working on efficient AI inference and systems.">
+  <meta name="description" content="Ruoying Wang researches efficient model inference and deployment at Duke Kunshan University, including speculative decoding, mobile GUI agents, and NPU vision pipelines.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Ruoying Wang">
-  <meta property="og:description" content="Research in efficient AI inference, GUI agents, and machine learning systems.">
+  <meta property="og:description" content="Research in efficient model inference, deployment, and machine learning systems.">
   <meta property="og:url" content="https://guyong1449.github.io/">
   <link rel="canonical" href="https://guyong1449.github.io/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Ruoying Wang","url":"https://guyong1449.github.io/","email":"mailto:rw335@duke.edu","affiliation":{"@type":"CollegeOrUniversity","name":"Duke Kunshan University"},"sameAs":["https://github.com/guyong1449","https://guyong.site/"]}</script>
   <title>Ruoying Wang</title>
 </head>
 <body>
   <main class="page">
     <header class="intro">
       <h1>Ruoying Wang</h1>
-      <p class="role">Undergraduate Researcher · Duke Kunshan University</p>
+      <p class="role">AI Infrastructure &amp; Efficient Inference · Duke Kunshan University</p>
       <p class="contacts"><a href="mailto:rw335@duke.edu">Email</a><span>·</span><a href="https://github.com/guyong1449">GitHub</a><span>·</span><a href="https://guyong.site/">Personal Site</a></p>
     </header>
 
     <section aria-labelledby="about">
       <h2 id="about">About Me</h2>
-      <p>I am an undergraduate student at Duke Kunshan University, pursuing a B.S. in Applied Mathematics and Computational Sciences on the Computer Science track. My research interests are efficient AI inference and the systems that support it, especially speculative decoding, reusable computation in GUI agents, and large-scale training.</p>
-      <p>I enjoy working across algorithms and implementation: identifying a bottleneck, building a practical system, and measuring whether it improves end-to-end performance.</p>
+      <p>I am an undergraduate student at Duke Kunshan University, pursuing a B.S. in Applied Mathematics and Computational Sciences on the Computer Science track. I work on making AI models faster to serve and easier to deploy, with research in speculative decoding, mobile GUI agents, and machine learning systems.</p>
+      <p>My work connects algorithm design with runtime engineering: reducing unnecessary model computation, parallelizing CPU-side inference work, and measuring latency in complete pipelines.</p>
     </section>
 
     <section aria-labelledby="research">
       <h2 id="research">Research</h2>
       <article class="entry">
         <div class="entry-head"><h3>Training-Free Speculative Decoding &amp; Token Reuse</h3><span>Aug 2026 – Present</span></div>
-        <p>Improving suffix-tree-based draft generation through multi-source retrieval, trie-based candidate fusion, and confidence-calibrated, cost-aware selection. The approach reduced decode-phase wall time by <strong>20.4%</strong> against the original Suffix proposer on Llama 3.1-8B with an NVIDIA A40, across five full benchmark runs.</p>
-        <p>I also developed batched, cross-request parallel draft proposal using a persistent C++ thread pool and GIL release, achieving a <strong>2.73× CPU speedup</strong> at batch size 16 while preserving bitwise-identical drafts.</p>
+        <p class="advisor">Advisor: <a href="https://faculty.dukekunshan.edu.cn/faculty_profiles/jiacheng-shen">Prof. Jiacheng Shen</a></p>
+        <p>Optimized the draft-proposal path for training-free LLM inference. Multi-source suffix retrieval, trie-based candidate fusion, and confidence-calibrated, cost-aware selection reduced <strong>decode-phase wall time by 20.4%</strong> against the original Suffix proposer on Llama 3.1-8B with an NVIDIA A40, across five full benchmark runs.</p>
+        <p>Reworked sequential per-request speculation into batched, cross-request parallel proposal with a persistent C++ thread pool and GIL release. At batch size 16, CPU proposal time fell from 280.6 to 102.9 μs (<strong>2.73× speedup</strong>) with bitwise-identical drafts.</p>
       </article>
       <article class="entry">
         <div class="entry-head"><h3>MEMOIR: Runtime Acceleration for Mobile GUI Agents</h3><span>Mar – Aug 2026</span></div>
-        <p>Co-designed reusable reasoning recipes and confidence-gated memory retrieval to avoid repeated vision-language inference. On AndroidControl with Qwen3-VL 8B, MEMOIR achieved a <strong>3.25× per-step speedup</strong> and improved low-level step accuracy from 65.2% to 69.3% over a chain-of-thought agent. Manuscript submitted to ICLR.</p>
+        <p class="advisor">Advisor: <a href="https://faculty.dukekunshan.edu.cn/faculty_profiles/jiacheng-shen">Prof. Jiacheng Shen</a></p>
+        <p>Co-designed a compact reduction DSL and confidence-gated memory retrieval to reuse successful GUI reasoning and avoid repeated vision-language inference. On AndroidControl with Qwen3-VL 8B, per-step latency fell from 3,314 to 1,019 ms (<strong>3.25× speedup</strong>), while low-level step accuracy improved from 65.2% to 69.3% over a chain-of-thought agent. Manuscript submitted to ICLR.</p>
       </article>
       <article class="entry">
-        <div class="entry-head"><h3>PACE SatMAE: Satellite Self-Supervised Pretraining</h3><span>Mar 2025 – May 2026</span></div>
-        <p>Built a distributed PyTorch training pipeline for terabyte-scale satellite data and developed spectral tokenization for masked autoencoder pretraining on 170+ band PACE hyperspectral imagery. Downstream chlorophyll-a estimation reached <strong>R² = 0.986</strong>, with approximately 2.5× faster convergence from MAE pretraining.</p>
+        <div class="entry-head"><h3>PACESatMAE: Distributed Satellite Pretraining</h3><span>Mar 2025 – May 2026</span></div>
+        <p class="advisor">Advisor: <a href="https://faculty.dukekunshan.edu.cn/faculty_profiles/zuchuan-li">Prof. Zuchuan Li</a></p>
+        <p>Built a distributed PyTorch training and streaming data pipeline for terabyte-scale satellite imagery, focusing on multi-GPU throughput and I/O efficiency. Developed 256-level spectral tokenization with learnable embeddings for MAE pretraining on 170+ band PACE hyperspectral imagery. Downstream chlorophyll-a estimation reached <strong>R² = 0.986</strong>, with approximately 2.5× faster convergence from MAE pretraining.</p>
       </article>
     </section>
 
@@ -48,7 +52,8 @@
       <h2 id="experience">Industry Experience</h2>
       <article class="entry">
         <div class="entry-head"><h3>Computer Vision Intern · Nanjing LES Electronic Equipment Co., Ltd.</h3><span>May – Aug 2026</span></div>
-        <p>Developed real-time UAV video analytics using YOLOv5 detection, Qwen2.5-VL scene understanding, and temporal consistency checks. Optimized vision models for Huawei Ascend 910B NPUs with pruning, INT8 quantization, and hardware-aware compilation. An asynchronous five-stream 720p pipeline sustained P95 decode-to-inference latency below 100 ms.</p>
+        <p>Built a real-time UAV video inference pipeline combining YOLOv5 detection, Qwen2.5-VL scene understanding, and temporal consistency checks across frames. For deployment on Huawei Ascend 910B NPUs, applied structured pruning, INT8 quantization, and hardware-aware compilation to reduce model footprint and inference overhead.</p>
+        <p>Engineered an asynchronous five-stream 720p pipeline that overlaps hardware video decoding, preprocessing, and NPU execution. The deployed inference path sustained <strong>P95 decode-to-inference latency below 100 ms</strong>.</p>
       </article>
     </section>
 
