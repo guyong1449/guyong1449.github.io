@@ -6,7 +6,7 @@ body{margin:0;background:#fff;color:var(--text);font-family:Arial,Helvetica,sans
 .lang-switch{display:flex;justify-content:flex-end;align-items:center;gap:9px;margin:-32px 0 27px;font-size:13px}.lang-switch a[aria-current="page"]{font-weight:700;color:var(--text);text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:4px}.lang-switch span{color:#97a89c}
 .intro{padding-bottom:26px;border-top:4px solid var(--accent);border-bottom:1px solid var(--rule);margin-bottom:42px;padding-top:22px}
 h1{font-size:36px;line-height:1.2;letter-spacing:-.03em;margin:0 0 6px;font-weight:700;color:var(--accent)}
-.identity{margin:0 0 6px;color:var(--accent);font-size:13px;font-weight:700;letter-spacing:.02em}
+.identity{margin:0 0 6px;color:#43825d;font-size:13px;font-weight:700;letter-spacing:.02em}
 .role{color:var(--muted);margin:0 0 12px;font-size:16px}
 .contacts{display:flex;flex-wrap:wrap;gap:10px;margin:0;font-size:14px}.contacts span{color:#97a89c}
 .contacts .wechat{color:var(--text)}
